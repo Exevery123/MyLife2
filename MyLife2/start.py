@@ -16,6 +16,10 @@ def random_salary(name):
         if job["name"] == name:
             return job["salary"]
 
+def worst_of_three_jobs():
+    jobs = [random_job() for _ in range(3)]
+    return min(jobs, key=lambda j: random_salary(j))
+
 def random_lifestyle(salary):
     x = salary / 1000
     lifestyles = [
@@ -224,9 +228,9 @@ while picked == False:
     
     new_ethnicity = random_ethnicity()
 
-    new_dad_job = random_job()
+    new_dad_job = worst_of_three_jobs()
     new_home_salary += random_salary(new_dad_job)
-    if random.randint(1,100) >= 26: new_mom_job = random_job()
+    if random.randint(1,100) >= 26: new_mom_job = worst_of_three_jobs()
     else: new_mom_job = "None"
     if new_mom_job == "None": new_home_salary += 0
     else: new_home_salary += random_salary(new_mom_job)
@@ -243,8 +247,8 @@ good_traits = ["Sportsy: Effective Strength is increased by 50% when doing Sport
                "Strategic: Effective Intellect is increased by 100% when playing board games, card games, or video games (1 happy token)",
                "Engergetic: Energy loss is slowed by 25% (2 happy tokens)",
                "Tricky: Effectice Sleight of Hand is increased by 50% (2 happy tokens)",
-               "Perceptive: Effective Perception is increased by 75% (2 happy tokens)"
-               "Agressive: Effective Intimidation is increased by 50%" + " and Effective Strength is increased by 25% while dealing damage to another human (2 happy tokens)"
+               "Perceptive: Effective Perception is increased by 75% (2 happy tokens)",
+               "Agressive: Effective Intimidation is increased by 50%" + " and Effective Strength is increased by 25% while dealing damage to another human (2 happy tokens)",
                "Manipulative: Effective Deception is increased by 50%" + " on family or friends, or 25%" + " on anyone else (3 happy tokens)",
                "Charming: Effective Persuasion is increased by 50%" + " on family or friends, or 25%" + " on anyone else (3 happy tokens)",
                "Fighter: Effective Strength is increased by 50% when dealing damage to another human (3 happy tokens)",
@@ -253,27 +257,58 @@ good_traits = ["Sportsy: Effective Strength is increased by 50% when doing Sport
                "Resillient: Take 50%" + " less damage when it deals less then half your max health (4 happy tokens)",
                "Engineer: Effective Intellect is increased by 50% when building something with technology (5 happy tokens)",
                "Survivor: The first time you drop to 0 health, drop to 10 health instead of dying (5 happy tokens)",
-               "Psychopath: Effective Deception is increased by 100% " + " and you regenerate all lost energy when commiting a major crime (6 happy tokens)"
+               "Psychopath: Effective Deception is increased by 100% " + " and you regenerate all lost energy when commiting a major crime (6 happy tokens)",
                "Natural: The first time you gain a skill, it starts at Level 3 instead of Level 1 (7 happy tokens)"]
 
 good_traits_weights = [1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6, 7]
 
 def reroll_traits():
+    global good_traits
+    global good_traits_weights
     random_good_traits = []
+    random_traits_weights = []
     for i in range(3): random_good_traits.append(random.choice(good_traits))
-    random_traits_weights = random_g
-    return random_good_traits
+    for i in range(3): random_traits_weights.append(good_traits_weights[good_traits.index(random_good_traits[i])])
+    return random_good_traits, random_traits_weights
 
 picked = False
-new_good_traits = reroll_traits()
+new_good_traits, new_good_weights = reroll_traits()
 new_traits = []
 
 while picked == False:
 
-    choice = input(f"""Choose a trait by typing 1-3, reroll by typing r, and exit by typing e. The traits are:
+    choice = input(f"""Choose a trait by typing 1-3, reroll for 1 happy token by typing r, and exit by typing e. The traits are:
                    1. {new_good_traits[0]}
                    2. {new_good_traits[1]}
                    3. {new_good_traits[2]}""")
 
-    if choice == '1' and : 
-        new_traits.append
+    if choice == '1' and tokens >= new_good_weights[0]:
+        new_traits.append(new_good_traits[0])
+        tokens -= new_good_weights[0]
+    elif choice == '2' and tokens >= new_good_weights[1]:
+        new_traits.append(new_good_traits[1])
+        tokens -= new_good_weights[1]
+    elif choice == '3' and tokens >= new_good_weights[2]:
+        new_traits.append(new_good_traits[2])
+        tokens -= new_good_weights[2]
+    elif choice == 'r' and tokens > 0: new_good_traits, new_good_weights = reroll_traits()
+    elif choice == 'e': picked = True
+
+for i, trait in enumerate(new_traits):
+    split_trait = trait.split()
+    new_traits[i] = split_trait[0][0:-1]
+
+new_strength = 0
+new_smarts = 0
+new_looks = 0
+
+while tokens != 0:
+
+    choice = input(f"""You have {tokens} tokens. You can spend one of your tokens on: 
+          1. Strength {new_strength}/10: This represents your physical brawnyness, speed, and resilience. If you get a heart attack, a high score in this might save you. 0 is a literal ragdoll, and 10 is world-class bodybuilder.
+          2. Smarts {new_smarts}/10: This represents your intellectual power, but your creativity is up to you, not your character. However, when provided with learning something new or an intellectlly challenging task, this might be useful. 0 is borderline intelltual disability, and 10 is prodigy.
+          3. Looks {new_looks}/10: This isn't just your physical looks, but your voice and how you come across to an outsider. Super useful when trying to persuade other people or trick them into doing something. This is super underated. 0 is ugly as hell and sounds like an animal, and 10 is super good looking, charming, and deceptive person.""")
+
+    if choice == '1': new_strength, tokens = new_strength + 1, tokens - 1
+    if choice == '2': new_smarts, tokens = new_smarts + 1, tokens - 1
+    if choice == '3': new_looks, tokens = new_looks + 1, tokens - 1
