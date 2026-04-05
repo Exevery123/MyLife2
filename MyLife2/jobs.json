@@ -1,0 +1,136 @@
+{
+  "careers": {
+    "Healthcare": [
+      { "name": "Registered Nurse", "salary": 86370 },
+      { "name": "Physician (General Practice)", "salary": 236000 },
+      { "name": "Dentist", "salary": 166300 },
+      { "name": "Pharmacist", "salary": 136030 },
+      { "name": "Physical Therapist", "salary": 99710 },
+      { "name": "Medical Assistant", "salary": 42000 },
+      { "name": "Licensed Practical Nurse", "salary": 55860 },
+      { "name": "Psychologist", "salary": 106510 },
+      { "name": "Surgeon", "salary": 352220 },
+      { "name": "Veterinarian", "salary": 119100 }
+    ],
+    "Technology": [
+      { "name": "Software Engineer", "salary": 132270 },
+      { "name": "Data Scientist", "salary": 108020 },
+      { "name": "Cybersecurity Analyst", "salary": 120360 },
+      { "name": "IT Support Specialist", "salary": 62760 },
+      { "name": "Web Developer", "salary": 88030 },
+      { "name": "Database Administrator", "salary": 101000 },
+      { "name": "Systems Administrator", "salary": 90520 },
+      { "name": "Product Manager", "salary": 140000 },
+      { "name": "UX/UI Designer", "salary": 104300 },
+      { "name": "Cloud Engineer", "salary": 126000 }
+    ],
+    "Business & Finance": [
+      { "name": "Accountant", "salary": 79880 },
+      { "name": "Financial Analyst", "salary": 96220 },
+      { "name": "Marketing Manager", "salary": 157620 },
+      { "name": "Human Resources Specialist", "salary": 67650 },
+      { "name": "Management Consultant", "salary": 104700 },
+      { "name": "Loan Officer", "salary": 84600 },
+      { "name": "Insurance Agent", "salary": 59080 },
+      { "name": "Logistician", "salary": 79400 },
+      { "name": "Real Estate Agent", "salary": 56620 },
+      { "name": "Financial Manager", "salary": 156100 }
+    ],
+    "Education": [
+      { "name": "Elementary School Teacher", "salary": 63670 },
+      { "name": "High School Teacher", "salary": 65220 },
+      { "name": "Special Education Teacher", "salary": 65910 },
+      { "name": "College Professor", "salary": 84380 },
+      { "name": "School Counselor", "salary": 61710 },
+      { "name": "Preschool Teacher", "salary": 37840 },
+      { "name": "Instructional Coordinator", "salary": 74620 },
+      { "name": "School Principal", "salary": 103460 },
+      { "name": "Librarian", "salary": 65080 },
+      { "name": "Tutor", "salary": 39530 }
+    ],
+    "Law & Government": [
+      { "name": "Lawyer", "salary": 145760 },
+      { "name": "Paralegal", "salary": 60970 },
+      { "name": "Police Officer", "salary": 74910 },
+      { "name": "Judge", "salary": 155840 },
+      { "name": "Court Clerk", "salary": 45560 },
+      { "name": "Urban Planner", "salary": 81800 },
+      { "name": "Compliance Officer", "salary": 75100 },
+      { "name": "Firefighter", "salary": 57580 },
+      { "name": "Political Scientist", "salary": 132220 },
+      { "name": "Probation Officer", "salary": 60250 }
+    ],
+    "Creative Arts & Media": [
+      { "name": "Graphic Designer", "salary": 57990 },
+      { "name": "Film/Video Editor", "salary": 62680 },
+      { "name": "Journalist", "salary": 55960 },
+      { "name": "Photographer", "salary": 40070 },
+      { "name": "Writer/Author", "salary": 73690 },
+      { "name": "Art Director", "salary": 105180 },
+      { "name": "Animator", "salary": 79960 },
+      { "name": "Music Producer", "salary": 62940 },
+      { "name": "Copywriter", "salary": 69510 },
+      { "name": "Public Relations Specialist", "salary": 67440 }
+    ],
+    "Engineering": [
+      { "name": "Civil Engineer", "salary": 95890 },
+      { "name": "Mechanical Engineer", "salary": 96310 },
+      { "name": "Electrical Engineer", "salary": 104610 },
+      { "name": "Chemical Engineer", "salary": 106260 },
+      { "name": "Aerospace Engineer", "salary": 126880 },
+      { "name": "Environmental Engineer", "salary": 100090 },
+      { "name": "Biomedical Engineer", "salary": 99550 },
+      { "name": "Industrial Engineer", "salary": 98560 },
+      { "name": "Petroleum Engineer", "salary": 131800 },
+      { "name": "Structural Engineer", "salary": 98540 }
+    ],
+    "Trades & Skilled Labor": [
+      { "name": "Electrician", "salary": 61590 },
+      { "name": "Plumber", "salary": 61550 },
+      { "name": "HVAC Technician", "salary": 57300 },
+      { "name": "Carpenter", "salary": 56350 },
+      { "name": "Welder", "salary": 47540 },
+      { "name": "Automotive Mechanic", "salary": 46880 },
+      { "name": "Construction Manager", "salary": 104900 },
+      { "name": "Heavy Equipment Operator", "salary": 55280 },
+      { "name": "Machinist", "salary": 50840 },
+      { "name": "Diesel Mechanic", "salary": 58350 }
+    ],
+    "Science & Research": [
+      { "name": "Biologist", "salary": 85290 },
+      { "name": "Chemist", "salary": 84680 },
+      { "name": "Physicist", "salary": 155680 },
+      { "name": "Environmental Scientist", "salary": 78980 },
+      { "name": "Geologist", "salary": 86340 },
+      { "name": "Microbiologist", "salary": 84400 },
+      { "name": "Epidemiologist", "salary": 81390 },
+      { "name": "Astronomer", "salary": 145510 },
+      { "name": "Lab Technician", "salary": 48380 },
+      { "name": "Forensic Scientist", "salary": 63740 }
+    ],
+    "Hospitality & Service": [
+      { "name": "Hotel Manager", "salary": 61910 },
+      { "name": "Chef/Head Cook", "salary": 56520 },
+      { "name": "Event Planner", "salary": 56920 },
+      { "name": "Travel Agent", "salary": 46400 },
+      { "name": "Restaurant Manager", "salary": 63060 },
+      { "name": "Bartender", "salary": 33390 },
+      { "name": "Flight Attendant", "salary": 63760 },
+      { "name": "Concierge", "salary": 38200 },
+      { "name": "Food Service Manager", "salary": 63060 },
+      { "name": "Tour Guide", "salary": 36440 }
+    ],
+    "Agriculture & Environment": [
+      { "name": "Farmer/Rancher", "salary": 37600 },
+      { "name": "Agricultural Engineer", "salary": 82640 },
+      { "name": "Conservation Scientist", "salary": 67200 },
+      { "name": "Landscape Architect", "salary": 76760 },
+      { "name": "Forester", "salary": 67200 },
+      { "name": "Animal Scientist", "salary": 76590 },
+      { "name": "Soil Scientist", "salary": 69350 },
+      { "name": "Agricultural Inspector", "salary": 48020 },
+      { "name": "Fish and Game Warden", "salary": 62580 },
+      { "name": "Sustainability Consultant", "salary": 80000 }
+    ]
+  }
+}
